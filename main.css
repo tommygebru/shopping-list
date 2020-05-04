@@ -17,6 +17,9 @@ button:hover {
   cursor: pointer;
 }
 
+/************************************
+  E L E M E N T S
+************************************/
 #shopping-list-item {
   width: 250px;
 }
