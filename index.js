@@ -30,11 +30,13 @@ li.innerHTML = `
 
 function handleAddItem(){
   event.preventDefault();
-console.log(itemEntry.value);
-shoppingList.appendChild(li); //works
+//add LI and components
+shoppingList.appendChild(li);
+//add shopping-item
+let listIndex = (document.getElementsByClassName("shopping-item").length) - 1;
+document.getElementsByClassName("shopping-item")[listIndex].innerHTML = itemEntry.value;
+//
 
-//shoppingList.innerHTML = stringList;
-//append element
 }//function
 addItemButton.addEventListener("click", handleAddItem);
 
