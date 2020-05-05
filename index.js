@@ -35,11 +35,19 @@ shoppingList.appendChild(li);
 //add shopping-item
 let listIndex = (document.getElementsByClassName("shopping-item").length) - 1;
 document.getElementsByClassName("shopping-item")[listIndex].innerHTML = itemEntry.value;
-//
-
 }//function
 addItemButton.addEventListener("click", handleAddItem);
 
+
+
+
+
+//written in jquery, strikethrough shopping list entries
+$(".button-label").on("click", function(event){
+  event.preventDefault();
+  let itemEntry = $(event.target).parent().parent().parent().find(".shopping-item");
+  itemEntry.toggleClass("shopping-item__checked");
+});//function
 
 
 });//ready function
